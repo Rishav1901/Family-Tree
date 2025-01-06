@@ -61,7 +61,15 @@ public:
 };
 
 int main() {
-    FamilyTree family("DSA kids", "01/01/1990");
+    string rootName, rootBirthdate;
+
+    cout << "Welcome to the Family Tree Generator!" << endl;
+    cout << "Enter the name of the root individual: ";
+    getline(cin, rootName);
+    cout << "Enter the birthdate of the root individual: ";
+    getline(cin, rootBirthdate);
+
+    FamilyTree family(rootName, rootBirthdate);
     vector<Individual*> individuals;
 
     individuals.push_back(family.getRoot());
